@@ -1,0 +1,25 @@
+version: "3.8"
+
+networks:
+    network:
+  
+volumes:
+    node_modules:
+
+services:
+
+    calculator-app-react:
+        stdin_open: true
+        container_name: calculator-app-react
+        command: "sh entrypoint.sh"
+        build:
+            context: .
+            dockerfile: ./docker/node/Dockerfile
+        ports:
+            - "8000:8000"
+        volumes:
+            # Store the node modules folder in a volume for performance
+            - node_modules:/app/node_modules
+            - "./:/app"
+        networks:
+            - network
