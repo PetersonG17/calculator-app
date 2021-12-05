@@ -1,3 +1,12 @@
+@import url('https://fonts.google.com/specimen/Spartan');
+
+body {
+  font-family: 'Spartan';
+  font-weight: 700;
+  color: white !important;
+}
+
 .background-dark-blue {
   background-color: hsl(222, 26%, 31%);
 }
+
