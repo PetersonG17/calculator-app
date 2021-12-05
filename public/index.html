@@ -45,72 +45,7 @@
     <!-- TODO: Make a slide animation -->
     <style>
       body { background-color: hsl(222, 26%, 31%); }
-      
-      .toggle {
-        display: flex;
-        padding-left: 7px;
-        padding-right: 7px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        justify-content: space-between;
-        border-radius: 15px;
-        background-color: hsl(223, 31%, 20%);
-        width: 100px;
-        margin-top: 5%;
-      }
-
-      .toggle-btn {
-        width: 20px;
-        height: 20px;
-        appearance: none;
-        border-radius: 15px;
-      }
-
-      .toggle-btn:checked {
-        background-color: hsl(6, 63%, 50%);
-        transition-property: background-color;
-        transition-duration: .3s;
-        transition-delay: 0s;
-      }
-
-      .toggle-btn:hover {
-        cursor: pointer;
-      }
-
-      .toggle-btn-container {
-        position: relative;
-        box-sizing: none;
-        width: 20px;
-        height: 20px;
-      }
-
-      .toggle-label {
-        position: absolute;
-        top: -30px;
-        left: 4px;
-        color: hsl(0, 0, 100%);
-      }
-
-      .toggle-label span {
-        color: white;
-      }
-
     </style>
-
-    <div class="toggle">
-      <div class="toggle-btn-container">
-        <label class="toggle-label" for="theme-1"><span>1</span></label>
-        <input checked class="toggle-btn" type="radio" id="theme-1" name="theme"/>
-      </div>
-      <div class="toggle-btn-container">
-        <label class="toggle-label" for="theme-2"><span>2</span></label>
-        <input class="toggle-btn" type="radio" id="theme-2" name="theme"/>
-      </div>
-      <div class="toggle-btn-container">
-        <label class="toggle-label" for="theme-3"><span>3</span></label>
-        <input class="toggle-btn" type="radio" id="theme-3" name="theme"/>
-      </div>
-    </div>
 
     <div id="root"></div>
     <!--

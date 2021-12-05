@@ -1,6 +1,6 @@
 import './App.css';
 
-import Attribution from './components/Attribution';
+//import Attribution from './components/Attribution';
 import ToggleSwitch from './components/ToggleSwitch';
 
 function App() {

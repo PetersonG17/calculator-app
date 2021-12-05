@@ -1,9 +1,48 @@
-/* datalist {
+.toggle {
     display: flex;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     justify-content: space-between;
-    width: 20%;
-}
-  
-input {
-    width: 20%;
-} */
+    border-radius: 15px;
+    background-color: hsl(223, 31%, 20%);
+    width: 100px;
+    margin-top: 5%;
+  }
+
+  .toggle-btn {
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    border-radius: 15px;
+  }
+
+  .toggle-btn:checked {
+    background-color: hsl(6, 63%, 50%);
+    transition-property: background-color;
+    transition-duration: .3s;
+    transition-delay: 0s;
+  }
+
+  .toggle-btn:hover {
+    cursor: pointer;
+  }
+
+  .toggle-btn-container {
+    position: relative;
+    box-sizing: none;
+    width: 20px;
+    height: 20px;
+  }
+
+  .toggle-label {
+    position: absolute;
+    top: -30px;
+    left: 4px;
+    color: hsl(0, 0, 100%);
+  }
+
+  .toggle-label span {
+    color: white;
+  }
