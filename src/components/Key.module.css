@@ -8,6 +8,10 @@
     margin: 2%;
 }
 
+.key-container:hover {
+    cursor: pointer;
+}
+
 .key-text {
     font-size: 32px;
 }
