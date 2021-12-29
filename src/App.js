@@ -1,5 +1,6 @@
 //import Attribution from './components/Attribution';
 import Display from './components/Display';
+import Keypad from './components/Keypad';
 import ToggleSwitch from './components/ToggleSwitch';
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
         <Display></Display>
       </div>
       <div className="row">
-
+        <Keypad></Keypad>
       </div>
     </div>
   );
