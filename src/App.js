@@ -3,15 +3,17 @@ import Display from './components/Display';
 import Keypad from './components/Keypad';
 import ToggleSwitch from './components/ToggleSwitch';
 
+import "./App.css";
+
 function App() {
   return (    
     <div className="container p-5">
       <div className="row">
-        <div className="col-2">
-          calc
+        <div className="col-2 fs-1">
+          Calc
         </div>
         <div className="col-10 d-flex justify-content-end">
-          <div className="d-flex flex-row align-items-center"> {/* Toggle Theme */}
+          <div className="d-flex flex-row align-items-end"> {/* Toggle Theme */}
             <div className="pe-3">
               THEME
             </div>

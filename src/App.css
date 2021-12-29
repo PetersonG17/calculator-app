@@ -1,16 +1,13 @@
-@import url('https://fonts.google.com/specimen/Spartan');
+@font-face {
+  font-family: 'Spartan', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+}
 
 body {
-  font-family: 'Spartan';
-  font-weight: 700;
-  color: white !important;
+  font-family: 'Spartan', sans-serif;
+  color: white;
 }
 
 .background-dark-blue {
   background-color: hsl(222, 26%, 31%);
 }
-
-div {
-  color: white;
-}
-
