@@ -34,3 +34,22 @@
     box-shadow: 0px 6px hsl(6, 68%, 35%);
     color: white;
 }
+
+/* Key Background Colors Pressed */
+.key-color-white:active {
+    background-color: hsl(25, 16%, 65%);
+    box-shadow: none;
+    color: hsl(198, 20%, 13%);
+}
+
+.key-color-blue:active {
+    background-color: hsl(226, 28%, 36%);
+    box-shadow: none;
+    color: white;
+}
+
+.key-color-red:active{
+    background-color: hsl(6, 68%, 35%);
+    box-shadow: none;
+    color: white;
+}
