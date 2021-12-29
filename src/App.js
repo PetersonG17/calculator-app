@@ -7,9 +7,25 @@ import "./App.css";
 function App() {
 
   const [displayValue, setDisplayValue] = useState(0.00);
+  const [history, setHistory] = useState([]);
+
+  const specialKeys = ['/', '-', '+', 'x', '=', 'DEL', 'RESET', '.'];
 
   function handleKeyPress(event) {
-    setDisplayValue(event.target.innerText);
+    const key = event.target.innetText;
+
+    // TODO: Finish this....
+    if(!specialKeys.includes(key)) {
+      setDisplayValue(event.target.innerText);
+    }
+  }
+
+  // TODO: Finish this....
+  function handleDelete(event) {
+    let newHistory = [...history];
+    let newDisplayValue = newHistory.pop();
+    setDisplayValue(newDisplayValue);
+    setHistory(newHistory)
   }
 
   return (    
@@ -31,7 +47,8 @@ function App() {
         <Display displayValue={displayValue}></Display>
       </div>
       <div className="row mt-3">
-        <Keypad onKeyPress={() => handleKeyPress}></Keypad>
+        {/* TODO: Need to pass the delete method to the correct key... */}
+        <Keypad onKeyPress={() => handleKeyPress} onDelete={() => handleDelete}></Keypad>
       </div>
     </div>
   );
