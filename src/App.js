@@ -10,7 +10,7 @@ function App() {
     <div className="container p-5">
       <div className="row">
         <div className="col-2 fs-1">
-          Calc
+          Calculator
         </div>
         <div className="col-10 d-flex justify-content-end">
           <div className="d-flex flex-row align-items-end"> {/* Toggle Theme */}
