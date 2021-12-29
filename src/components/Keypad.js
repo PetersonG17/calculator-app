@@ -2,76 +2,72 @@
 import Key from './Key';
 import styles from './Keypad.module.css';
 
-function Keypad() {
-
-    function handleKeyPress(key) {
-        console.log(key);
-    }
+function Keypad(props) {
 
     return (
         <div className={styles['keypad-container']}>
             <div className="row">
                 <div className="col-3">
-                    <Key text="7" color="white" onKeyPress={() => handleKeyPress(7)}></Key>
+                    <Key text="7" color="white" onKeyPress={props.onKeyPress()}></Key>
                 </div>
                 <div className="col-3">
-                    <Key text="8" color="white"></Key>
+                    <Key text="8" color="white" onKeyPress={props.onKeyPress()}></Key>
                 </div>
                 <div className="col-3">
-                    <Key text="9" color="white"></Key>
+                    <Key text="9" color="white" onKeyPress={props.onKeyPress()}></Key>
                 </div>
                 <div className="col-3">
-                    <Key text="DEL" color="blue"></Key>
-                </div>
-            </div>
-            <div className="row mt-3">
-                <div className="col-3">
-                    <Key text="4" color="white"></Key>
-                </div>
-                <div className="col-3">
-                    <Key text="5" color="white"></Key>
-                </div>
-                <div className="col-3">
-                    <Key text="6" color="white"></Key>
-                </div>
-                <div className="col-3">
-                    <Key text="+" color="white"></Key>
+                    <Key text="DEL" color="blue" onKeyPress={props.onKeyPress()}></Key>
                 </div>
             </div>
             <div className="row mt-3">
                 <div className="col-3">
-                    <Key text="1" color="white"></Key>
+                    <Key text="4" color="white" onKeyPress={props.onKeyPress()}></Key>
                 </div>
                 <div className="col-3">
-                    <Key text="2" color="white"></Key>
+                    <Key text="5" color="white" onKeyPress={props.onKeyPress()}></Key>
                 </div>
                 <div className="col-3">
-                    <Key text="3" color="white"></Key>
+                    <Key text="6" color="white" onKeyPress={props.onKeyPress()}></Key>
                 </div>
                 <div className="col-3">
-                    <Key text="-" color="white"></Key>
+                    <Key text="+" color="white" onKeyPress={props.onKeyPress()}></Key>
                 </div>
             </div>
             <div className="row mt-3">
                 <div className="col-3">
-                    <Key text="." color="white"></Key>
+                    <Key text="1" color="white" onKeyPress={props.onKeyPress()}></Key>
                 </div>
                 <div className="col-3">
-                    <Key text="0" color="white"></Key>
+                    <Key text="2" color="white" onKeyPress={props.onKeyPress()}></Key>
                 </div>
                 <div className="col-3">
-                    <Key text="/" color="white"></Key>
+                    <Key text="3" color="white" onKeyPress={props.onKeyPress()}></Key>
                 </div>
                 <div className="col-3">
-                    <Key text="x" color="white"></Key>
+                    <Key text="-" color="white" onKeyPress={props.onKeyPress()}></Key>
+                </div>
+            </div>
+            <div className="row mt-3">
+                <div className="col-3">
+                    <Key text="." color="white" onKeyPress={props.onKeyPress()}></Key>
+                </div>
+                <div className="col-3">
+                    <Key text="0" color="white" onKeyPress={props.onKeyPress()}></Key>
+                </div>
+                <div className="col-3">
+                    <Key text="/" color="white" onKeyPress={props.onKeyPress()}></Key>
+                </div>
+                <div className="col-3">
+                    <Key text="x" color="white" onKeyPress={props.onKeyPress()}></Key>
                 </div>
             </div>
             <div className="row mt-3">
                 <div className="col-6">
-                    <Key text="RESET" color="blue"></Key>
+                    <Key text="RESET" color="blue" onKeyPress={props.onKeyPress()}></Key>
                 </div>
                 <div className="col-6">
-                    <Key text="=" color="red"></Key>
+                    <Key text="=" color="red" onKeyPress={props.onKeyPress()}></Key>
                 </div>
             </div>
         </div>

@@ -1,11 +1,10 @@
-
 import styles from './Display.module.css';
 
-function Display() {
+function Display(props) {
     return (
         <div className={styles['display-container']}>
             <div className={styles['display-text']}>
-                123,456.00
+                {props.displayValue}
             </div>
         </div>
     );

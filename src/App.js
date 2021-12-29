@@ -1,11 +1,17 @@
-//import Attribution from './components/Attribution';
+import React, { useState } from 'react';
 import Display from './components/Display';
 import Keypad from './components/Keypad';
 import ToggleSwitch from './components/ToggleSwitch';
-
 import "./App.css";
 
 function App() {
+
+  const [displayValue, setDisplayValue] = useState(0.00);
+
+  function handleKeyPress(event) {
+    setDisplayValue(event.target.innerText);
+  }
+
   return (    
     <div className="container p-5">
       <div className="row">
@@ -22,10 +28,10 @@ function App() {
         </div>
       </div>
       <div className="row mt-3">
-        <Display></Display>
+        <Display displayValue={displayValue}></Display>
       </div>
       <div className="row mt-3">
-        <Keypad></Keypad>
+        <Keypad onKeyPress={() => handleKeyPress}></Keypad>
       </div>
     </div>
   );
