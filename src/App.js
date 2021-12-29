@@ -22,7 +22,7 @@ function App() {
       <div className="row mt-3">
         <Display></Display>
       </div>
-      <div className="row">
+      <div className="row mt-3">
         <Keypad></Keypad>
       </div>
     </div>

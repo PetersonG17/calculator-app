@@ -5,7 +5,7 @@ function Display() {
     return (
         <div className={styles['display-container']}>
             <div className={styles['display-text']}>
-                Testing
+                123,456.00
             </div>
         </div>
     );
