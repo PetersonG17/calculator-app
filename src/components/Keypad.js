@@ -3,11 +3,16 @@ import Key from './Key';
 import styles from './Keypad.module.css';
 
 function Keypad() {
+
+    function handleKeyPress(key) {
+        console.log(key);
+    }
+
     return (
         <div className={styles['keypad-container']}>
             <div className="row">
                 <div className="col-3">
-                    <Key text="7" color="white"></Key>
+                    <Key text="7" color="white" onKeyPress={() => handleKeyPress(7)}></Key>
                 </div>
                 <div className="col-3">
                     <Key text="8" color="white"></Key>
