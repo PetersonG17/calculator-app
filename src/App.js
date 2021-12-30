@@ -4,6 +4,8 @@ import Keypad from './components/Keypad';
 import ToggleSwitch from './components/ToggleSwitch';
 import "./App.css";
 
+// TODO: Make this work with decimals...
+// TODO: Move this logic into a Caluclator component
 function App() {
 
   const [displayValue, setDisplayValue] = useState(0.00);
@@ -70,7 +72,7 @@ function App() {
     let newHistory = [...history];
     newHistory.push(key);
 
-    // TODO: Display previous something different....
+    // TODO: Display current caluclation...
     setDisplayValue(0.00);
     setHistory(newHistory);
     setCurrentNumber(null);
@@ -83,24 +85,26 @@ function App() {
     let result = 0;
     for(let i = 0; i < history.length; i++) {
       if(OPERATIONS.includes(history[i])) {
+
+        // TODO: Move these into methods. Polymorphism in Javascript???
         switch(history[i]) {
           case ADD:
-            // TODO: Implement this...
             result = parseFloat(result) + parseFloat(defaultToZeroIfNotDefined(history[i + 1]));
             break;
           case SUBTRACT:
-            // TODO: Implement this...
+            result = parseFloat(result) - parseFloat(defaultToZeroIfNotDefined(history[i + 1]));
             break;
           case MULTIPLY:
-            // TODO: Implement this...
+            result = parseFloat(result) * parseFloat(defaultToZeroIfNotDefined(history[i + 1]));
             break;
           case DIVIDE:
-            // TODO: Implement this...
+            result = parseFloat(result) / parseFloat(defaultToZeroIfNotDefined(history[i + 1]));
             break;
           default:
             console.log(`Error! No operation defined for ${history[i]}`);
             break;
         }
+
       } else {
         // If on the first iteration, set the result to the first number in the history array
         if(i === 0) {
