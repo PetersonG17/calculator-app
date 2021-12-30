@@ -73,7 +73,7 @@ function App() {
         switch(history[i]) {
           case ADD:
             // TODO: Implement this...
-            result = result + defaultToZeroIfNotDefined(history[i - 1])
+            //result = result + defaultToZeroIfNotDefined(history[i - 1])
             break;
           case SUBTRACT:
             // TODO: Implement this...
