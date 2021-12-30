@@ -114,6 +114,12 @@ function App() {
     // TODO: Take care of the history?
   }
 
+  function handleReset(event) {
+    setDisplayValue(0.00);
+    setHistory([]); // Clear the history
+    setCurrentNumber(null);
+  }
+
   function defaultToZeroIfNotDefined(variable) {
     return typeof variable === 'undefined' ? 0 : variable;
   }
@@ -142,6 +148,7 @@ function App() {
           onDelete={() => handleDelete}
           onOperation={() => handleOperation}
           onEquals={() => handleEquals}
+          onReset={() => handleReset}
         ></Keypad>
       </div>
     </div>

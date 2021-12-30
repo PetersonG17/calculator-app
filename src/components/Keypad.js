@@ -64,7 +64,7 @@ function Keypad(props) {
             </div>
             <div className="row mt-3">
                 <div className="col-6">
-                    <Key text="RESET" color="blue" onKeyPress={props.onGeneric()}></Key>
+                    <Key text="RESET" color="blue" onKeyPress={props.onReset()}></Key>
                 </div>
                 <div className="col-6">
                     <Key text="=" color="red" onKeyPress={props.onEquals()}></Key>
