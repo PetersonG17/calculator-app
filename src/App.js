@@ -10,6 +10,14 @@ function App() {
   const [history, setHistory] = useState([]);
   const [currentNumber, setCurrentNumber] = useState(null);
 
+  // Operations
+  const SUBTRACT = "-";
+  const ADD = "+";
+  const MULTIPLY = "x";
+  const DIVIDE = "/";
+
+  const OPERATIONS = [SUBTRACT, ADD, MULTIPLY, DIVIDE];
+
   // TODO: Clean this up...
   function handleGeneric(event) {
     const key = event.target.innerText;
@@ -41,7 +49,6 @@ function App() {
   }
 
   function handleOperation(event) {
-    console.log(event.target.innerText);
     const key = event.target.innerText;
     let newHistory = [...history];
 
@@ -56,8 +63,43 @@ function App() {
   }
 
   // TODO: Finish this...
-  function handleEquals() {
+  function handleEquals(event) {
+    const key = event.target.innerText;
 
+    // Perform all the operations
+    let result = 0;
+    for(let i = 0; i < history.length; i++) {
+      if(OPERATIONS.includes(history[i])) {
+        switch(history[i]) {
+          case ADD:
+            // TODO: Implement this...
+            result = result + defaultToZeroIfNotDefined(history[i - 1])
+            break;
+          case SUBTRACT:
+            // TODO: Implement this...
+            break;
+          case MULTIPLY:
+            // TODO: Implement this...
+            break;
+          case DIVIDE:
+            // TODO: Implement this...
+            break;
+          default:
+            console.log(`Error! No operation defined for ${history[i]}`);
+            break;
+        }
+      } else {
+        // TODO: What to do if it is just a number?
+        // Do nothing as there should always be a number then an operation then another number....
+      }
+    }
+
+    // TODO: Display the result...
+    // TODO: Take care of the history?
+  }
+
+  function defaultToZeroIfNotDefined(variable) {
+    return typeof variable === 'undefined' ? 0 : variable;
   }
 
   return (    
