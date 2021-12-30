@@ -24,13 +24,21 @@ function App() {
 
     // Concatinate strings together for the number
     let newNumber = null;
-    console.log(currentNumber, key);
     if(currentNumber === null) {
       newNumber = key.toString();
     } else {
       newNumber = currentNumber.toString() + key.toString();
     }
 
+    // Update the history with the new number
+    let newHistory = [...history];
+    if(currentNumber === null) { // If this is a new keypress then add to the array
+      newHistory.push(newNumber);
+    } else { // If this is concatinating the current number then just replace the last number on the array
+      newHistory[newHistory.length - 1] = newNumber;
+    }
+
+    setHistory(newHistory);
     setCurrentNumber(newNumber);
     setDisplayValue(newNumber);
   }
@@ -50,10 +58,9 @@ function App() {
 
   function handleOperation(event) {
     const key = event.target.innerText;
-    let newHistory = [...history];
 
-    // push the number and the key in order
-    newHistory.push(currentNumber);
+    // Update the history with the key
+    let newHistory = [...history];
     newHistory.push(key);
 
     // TODO: Display previous something different....
@@ -64,7 +71,6 @@ function App() {
 
   // TODO: Finish this...
   function handleEquals(event) {
-    const key = event.target.innerText;
 
     // Perform all the operations
     let result = 0;
@@ -73,7 +79,7 @@ function App() {
         switch(history[i]) {
           case ADD:
             // TODO: Implement this...
-            //result = result + defaultToZeroIfNotDefined(history[i - 1])
+            result = parseFloat(result) + parseFloat(defaultToZeroIfNotDefined(history[i + 1]));
             break;
           case SUBTRACT:
             // TODO: Implement this...
@@ -89,12 +95,15 @@ function App() {
             break;
         }
       } else {
-        // TODO: What to do if it is just a number?
-        // Do nothing as there should always be a number then an operation then another number....
+        // If on the first iteration, set the result to the first number in the history array
+        if(i === 0) {
+          result = history[i];
+        }
       }
     }
 
-    // TODO: Display the result...
+    // Display the result...
+    setDisplayValue(result)
     // TODO: Take care of the history?
   }
 
