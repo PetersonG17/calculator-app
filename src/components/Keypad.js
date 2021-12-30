@@ -8,66 +8,66 @@ function Keypad(props) {
         <div className={styles['keypad-container']}>
             <div className="row">
                 <div className="col-3">
-                    <Key text="7" color="white" onKeyPress={props.onKeyPress()}></Key>
+                    <Key text="7" color="white" onKeyPress={props.onGeneric()}></Key>
                 </div>
                 <div className="col-3">
-                    <Key text="8" color="white" onKeyPress={props.onKeyPress()}></Key>
+                    <Key text="8" color="white" onKeyPress={props.onGeneric()}></Key>
                 </div>
                 <div className="col-3">
-                    <Key text="9" color="white" onKeyPress={props.onKeyPress()}></Key>
+                    <Key text="9" color="white" onKeyPress={props.onGeneric()}></Key>
                 </div>
                 <div className="col-3">
-                    <Key text="DEL" color="blue" onKeyPress={props.onKeyPress()}></Key>
-                </div>
-            </div>
-            <div className="row mt-3">
-                <div className="col-3">
-                    <Key text="4" color="white" onKeyPress={props.onKeyPress()}></Key>
-                </div>
-                <div className="col-3">
-                    <Key text="5" color="white" onKeyPress={props.onKeyPress()}></Key>
-                </div>
-                <div className="col-3">
-                    <Key text="6" color="white" onKeyPress={props.onKeyPress()}></Key>
-                </div>
-                <div className="col-3">
-                    <Key text="+" color="white" onKeyPress={props.onKeyPress()}></Key>
+                    <Key text="DEL" color="blue" onKeyPress={props.onDelete()}></Key>
                 </div>
             </div>
             <div className="row mt-3">
                 <div className="col-3">
-                    <Key text="1" color="white" onKeyPress={props.onKeyPress()}></Key>
+                    <Key text="4" color="white" onKeyPress={props.onGeneric()}></Key>
                 </div>
                 <div className="col-3">
-                    <Key text="2" color="white" onKeyPress={props.onKeyPress()}></Key>
+                    <Key text="5" color="white" onKeyPress={props.onGeneric()}></Key>
                 </div>
                 <div className="col-3">
-                    <Key text="3" color="white" onKeyPress={props.onKeyPress()}></Key>
+                    <Key text="6" color="white" onKeyPress={props.onGeneric()}></Key>
                 </div>
                 <div className="col-3">
-                    <Key text="-" color="white" onKeyPress={props.onKeyPress()}></Key>
+                    <Key text="+" color="white" onKeyPress={props.onOperation()}></Key>
                 </div>
             </div>
             <div className="row mt-3">
                 <div className="col-3">
-                    <Key text="." color="white" onKeyPress={props.onKeyPress()}></Key>
+                    <Key text="1" color="white" onKeyPress={props.onGeneric()}></Key>
                 </div>
                 <div className="col-3">
-                    <Key text="0" color="white" onKeyPress={props.onKeyPress()}></Key>
+                    <Key text="2" color="white" onKeyPress={props.onGeneric()}></Key>
                 </div>
                 <div className="col-3">
-                    <Key text="/" color="white" onKeyPress={props.onKeyPress()}></Key>
+                    <Key text="3" color="white" onKeyPress={props.onGeneric()}></Key>
                 </div>
                 <div className="col-3">
-                    <Key text="x" color="white" onKeyPress={props.onKeyPress()}></Key>
+                    <Key text="-" color="white" onKeyPress={props.onOperation()}></Key>
+                </div>
+            </div>
+            <div className="row mt-3">
+                <div className="col-3">
+                    <Key text="." color="white" onKeyPress={props.onGeneric()}></Key>
+                </div>
+                <div className="col-3">
+                    <Key text="0" color="white" onKeyPress={props.onGeneric()}></Key>
+                </div>
+                <div className="col-3">
+                    <Key text="/" color="white" onKeyPress={props.onOperation()}></Key>
+                </div>
+                <div className="col-3">
+                    <Key text="x" color="white" onKeyPress={props.onOperation()}></Key>
                 </div>
             </div>
             <div className="row mt-3">
                 <div className="col-6">
-                    <Key text="RESET" color="blue" onKeyPress={props.onKeyPress()}></Key>
+                    <Key text="RESET" color="blue" onKeyPress={props.onGeneric()}></Key>
                 </div>
                 <div className="col-6">
-                    <Key text="=" color="red" onKeyPress={props.onKeyPress()}></Key>
+                    <Key text="=" color="red" onKeyPress={props.onGeneric()}></Key>
                 </div>
             </div>
         </div>

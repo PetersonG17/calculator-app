@@ -8,24 +8,50 @@ function App() {
 
   const [displayValue, setDisplayValue] = useState(0.00);
   const [history, setHistory] = useState([]);
+  const [currentNumber, setCurrentNumber] = useState(null);
 
-  const specialKeys = ['/', '-', '+', 'x', '=', 'DEL', 'RESET', '.'];
+  // TODO: Clean this up...
+  function handleGeneric(event) {
+    const key = event.target.innerText;
 
-  function handleKeyPress(event) {
-    const key = event.target.innetText;
-
-    // TODO: Finish this....
-    if(!specialKeys.includes(key)) {
-      setDisplayValue(event.target.innerText);
+    // Concatinate strings together for the number
+    let newNumber = null;
+    console.log(currentNumber, key);
+    if(currentNumber === null) {
+      newNumber = key.toString();
+    } else {
+      newNumber = currentNumber.toString() + key.toString();
     }
+
+    setCurrentNumber(newNumber);
+    setDisplayValue(newNumber);
   }
 
-  // TODO: Finish this....
-  function handleDelete(event) {
+  // TODO: Clean this up...
+  function handleDelete() {
     let newHistory = [...history];
-    let newDisplayValue = newHistory.pop();
+
+    // Remove the last entry from the history
+    newHistory.pop();
+    let newDisplayValue = 0.00;
+
     setDisplayValue(newDisplayValue);
     setHistory(newHistory)
+    setCurrentNumber(null);
+  }
+
+  function handleOperation(event) {
+    console.log(event.target.innerText);
+    const key = event.target.innerText;
+    let newHistory = [...history];
+
+    // push the number and the key in order
+    newHistory.push(currentNumber);
+    newHistory.push(key);
+
+    setDisplayValue(0.00);
+    setHistory(newHistory);
+    setCurrentNumber(null);
   }
 
   return (    
@@ -47,8 +73,11 @@ function App() {
         <Display displayValue={displayValue}></Display>
       </div>
       <div className="row mt-3">
-        {/* TODO: Need to pass the delete method to the correct key... */}
-        <Keypad onKeyPress={() => handleKeyPress} onDelete={() => handleDelete}></Keypad>
+        <Keypad 
+          onGeneric={() => handleGeneric} 
+          onDelete={() => handleDelete}
+          onOperation={() => handleOperation}
+        ></Keypad>
       </div>
     </div>
   );
