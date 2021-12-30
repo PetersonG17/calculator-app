@@ -49,7 +49,14 @@ function App() {
 
     // Remove the last entry from the history
     newHistory.pop();
-    let newDisplayValue = 0.00;
+
+    // Set the display to show the history
+    let newDisplayValue = "No History";
+    if(newHistory.length !== 0) {
+      newDisplayValue = newHistory.reduce((prev, current) => {
+        return prev + current;
+      });
+    }
 
     setDisplayValue(newDisplayValue);
     setHistory(newHistory)
