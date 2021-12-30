@@ -49,9 +49,15 @@ function App() {
     newHistory.push(currentNumber);
     newHistory.push(key);
 
+    // TODO: Display previous something different....
     setDisplayValue(0.00);
     setHistory(newHistory);
     setCurrentNumber(null);
+  }
+
+  // TODO: Finish this...
+  function handleEquals() {
+
   }
 
   return (    
@@ -77,6 +83,7 @@ function App() {
           onGeneric={() => handleGeneric} 
           onDelete={() => handleDelete}
           onOperation={() => handleOperation}
+          onEquals={() => handleEquals}
         ></Keypad>
       </div>
     </div>
