@@ -1,3 +1,5 @@
+@import "../Themes.css";
+
 .key-container {
     border-radius: 8px;
     display: flex;
@@ -17,39 +19,39 @@
 }
 
 /* Key Background Colors */
-.key-color-white {
-    background-color: hsl(32, 26%, 89%);
-    box-shadow: 0px 6px hsl(25, 16%, 65%);
-    color: hsl(198, 20%, 13%);
+.key-type-generic {
+    background-color: var(--generic-key-background-color);
+    box-shadow: var(--generic-key-box-shadow);
+    color: var(--generic-key-text-color);
 }
 
-.key-color-blue {
-    background-color: hsl(226, 22%, 50%);
-    box-shadow: 0px 6px hsl(226, 28%, 36%);
-    color: white;
+.key-type-special {
+    background-color: var(--special-key-background-color);
+    box-shadow: var(--special-key-box-shadow);
+    color: var(--special-key-text-color);
 }
 
-.key-color-red {
-    background-color: hsl(6, 64%, 50%);
-    box-shadow: 0px 6px hsl(6, 68%, 35%);
-    color: white;
+.key-type-result {
+    background-color: var(--result-key-background-color);
+    box-shadow: var(--result-key-box-shadow);
+    color: var(--result-key-text-color);
 }
 
 /* Key Background Colors Pressed */
-.key-color-white:active {
-    background-color: hsl(25, 16%, 65%);
-    box-shadow: none;
-    color: hsl(198, 20%, 13%);
+.key-type-generic:active {
+    background-color: var(--generic-key-background-color-active);
+    box-shadow: var(--generic-key-box-shadow-active);
+    color: var(--generic-key-text-color-active);
 }
 
-.key-color-blue:active {
-    background-color: hsl(226, 28%, 36%);
-    box-shadow: none;
-    color: white;
+.key-type-special:active {
+    background-color: var(--special-key-background-color-active);
+    box-shadow: var(--special-key-box-shadow-active);
+    color: var(--special-key-text-color-active);
 }
 
-.key-color-red:active{
-    background-color: hsl(6, 68%, 35%);
-    box-shadow: none;
-    color: white;
+.key-type-result:active{
+    background-color: var(--result-key-background-color-active);
+    box-shadow: var(--result-key-box-shadow-active);
+    color: var(--result-key-text-color-active);
 }

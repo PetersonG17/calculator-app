@@ -1,0 +1,5 @@
+@import "../Themes.css";
+
+.main-font-color { 
+    color: var(--main-text-color);
+}

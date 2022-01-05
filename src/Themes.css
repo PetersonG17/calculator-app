@@ -1,0 +1,143 @@
+[data-theme="one"] {
+    /* Main Background */
+    --main-background-color: hsl(222, 26%, 31%);
+    --main-text-color: white;
+
+    /* Toggle */
+    --toggle-background-color: hsl(223, 31%, 20%);
+    --toggle-btn-checked-color: hsl(6, 63%, 50%);
+    --toggle-label-text-color: white;
+
+    /* Display */
+    --display-background-color: hsl(224, 36%, 15%);
+    --display-text-color: white;
+
+    /* Keypad */
+    --keypad-background-color: hsl(223, 31%, 20%);
+
+    /* Generic Keys */
+    /* Normal */
+    --generic-key-background-color: hsl(32, 26%, 89%);
+    --generic-key-box-shadow: 0px 6px hsl(25, 16%, 65%);
+    --generic-key-text-color: hsl(198, 20%, 13%);
+    /* Active */
+    --generic-key-background-color-active: hsl(25, 16%, 65%);
+    --generic-key-box-shadow-active: none;
+    --generic-key-text-color-active: hsl(198, 20%, 13%);
+
+    /* Special Keys */
+    /* Normal */
+    --special-key-background-color: hsl(226, 22%, 50%);
+    --special-key-box-shadow: 0px 6px hsl(226, 28%, 36%);
+    --special-key-text-color: white;
+    /* Active */
+    --special-key-background-color-active: hsl(226, 28%, 36%);
+    --special-key-box-shadow-active: none;
+    --special-key-text-color-active: white;
+
+    /* Result Keys */
+    /* Normal */
+    --result-key-background-color: hsl(6, 64%, 50%);
+    --result-key-box-shadow: 0px 6px hsl(6, 68%, 35%);
+    --result-key-text-color: white;
+    /* Active */
+    --result-key-background-color-active: hsl(6, 68%, 35%);
+    --result-key-box-shadow-active: none;
+    --result-key-text-color-active: white;
+}
+
+[data-theme="two"] {
+    /* Main Background */
+    --main-background-color: orange;
+    --main-text-color: green;
+
+    /* Toggle */
+    --toggle-background-color: hsl(223, 31%, 20%);
+    --toggle-btn-checked-color: hsl(6, 63%, 50%);
+    --toggle-label-text-color: white;
+
+    /* Display */
+    --display-background-color: hsl(224, 36%, 15%);
+    --display-text-color: white;
+
+    /* Keypad */
+    --keypad-background-color: hsl(223, 31%, 20%);
+
+    /* Generic Keys */
+    /* Normal */
+    --generic-key-background-color: hsl(32, 26%, 89%);
+    --generic-key-box-shadow: 0px 6px hsl(226, 28%, 36%);
+    --generic-key-text-color: hsl(198, 20%, 13%);
+    /* Active */
+    --generic-key-background-color-active: hsl(25, 16%, 65%);
+    --generic-key-box-shadow-active: none;
+    --generic-key-text-color-active: hsl(198, 20%, 13%);
+
+    /* Special Keys */
+    /* Normal */
+    --special-key-background-color: hsl(226, 22%, 50%);
+    --special-key-box-shadow: 0px 6px hsl(226, 28%, 36%);
+    --special-key-text-color: white;
+    /* Active */
+    --special-key-background-color-active: hsl(226, 28%, 36%);
+    --special-key-box-shadow-active: none;
+    --special-key-text-color-active: white;
+
+    /* Result Keys */
+    /* Normal */
+    --result-key-background-color: hsl(6, 64%, 50%);
+    --result-key-box-shadow: 0px 6px hsl(6, 68%, 35%);
+    --result-key-text-color: white;
+    /* Active */
+    --result-key-background-color-active: hsl(6, 68%, 35%);
+    --result-key-box-shadow-active: none;
+    --result-key-text-color-active: white;
+}
+
+[data-theme="three"] {
+    /* Main Background */
+    --main-background-color: orange;
+    --main-text-color: green;
+
+    /* Toggle */
+    --toggle-background-color: hsl(223, 31%, 20%);
+    --toggle-btn-checked-color: hsl(6, 63%, 50%);
+    --toggle-label-text-color: white;
+
+    /* Display */
+    --display-background-color: hsl(224, 36%, 15%);
+    --display-text-color: white;
+
+    /* Keypad */
+    --keypad-background-color: hsl(223, 31%, 20%);
+
+    /* Generic Keys */
+    /* Normal */
+    --generic-key-background-color: hsl(32, 26%, 89%);
+    --generic-key-box-shadow: 0px 6px hsl(226, 28%, 36%);
+    --generic-key-text-color: hsl(198, 20%, 13%);
+    /* Active */
+    --generic-key-background-color-active: hsl(25, 16%, 65%);
+    --generic-key-box-shadow-active: none;
+    --generic-key-text-color-active: hsl(198, 20%, 13%);
+
+    /* Special Keys */
+    /* Normal */
+    --special-key-background-color: hsl(226, 22%, 50%);
+    --special-key-box-shadow: 0px 6px hsl(226, 28%, 36%);
+    --special-key-text-color: white;
+    /* Active */
+    --special-key-background-color-active: hsl(226, 28%, 36%);
+    --special-key-box-shadow-active: none;
+    --special-key-text-color-active: white;
+
+    /* Result Keys */
+    /* Normal */
+    --result-key-background-color: hsl(6, 64%, 50%);
+    --result-key-box-shadow: 0px 6px hsl(6, 68%, 35%);
+    --result-key-text-color: white;
+    /* Active */
+    --result-key-background-color-active: hsl(6, 68%, 35%);
+    --result-key-box-shadow-active: none;
+    --result-key-text-color-active: white;
+}

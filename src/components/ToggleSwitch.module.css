@@ -1,3 +1,5 @@
+@import "../Themes.css";
+
 .toggle {
     display: flex;
     padding-left: 7px;
@@ -6,7 +8,7 @@
     padding-bottom: 5px;
     justify-content: space-between;
     border-radius: 15px;
-    background-color: hsl(223, 31%, 20%);
+    background-color: var(--toggle-background-color);
     width: 100px;
     margin-top: 5%;
   }
@@ -19,7 +21,7 @@
   }
 
   .toggle-btn:checked {
-    background-color: hsl(6, 63%, 50%);
+    background-color: var(--toggle-btn-checked-color);
     transition-property: background-color;
     transition-duration: .3s;
     transition-delay: 0s;
@@ -40,9 +42,9 @@
     position: absolute;
     top: -30px;
     left: 4px;
-    color: hsl(0, 0, 100%);
+    color: var(--toggle-label-text-color);
   }
 
   .toggle-label span {
-    color: white;
+    color: var(--toggle-label-text-color);
   }

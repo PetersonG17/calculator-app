@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Display from './Display';
 import Keypad from './Keypad';
 import ToggleSwitch from './ToggleSwitch';
+import styles from './Calculator.module.css';
 
 // TODO: Add Tests...
 // TODO: Make sure mobile responsiveness works...
@@ -130,29 +131,25 @@ function Calculator() {
   return (
     <div className="container p-5">
       <div className="row">
-      <div className="col-2 fs-1 text-white">
-          Calculator
-      </div>
-      <div className="col-10 d-flex justify-content-end">
-        <div className="d-flex flex-row align-items-end"> {/* Toggle Theme */}
-        <div className="pe-3 text-white">
-            THEME
-        </div>
-        <ToggleSwitch></ToggleSwitch>
-        </div>
-      </div>
+        <div className={styles['main-font-color'] + " col-2 fs-1"} data-theme="one">Calculator</div>
+        <div className="col-10 d-flex justify-content-end">
+          <div className="d-flex flex-row align-items-end">
+            <div className={styles['main-font-color'] + " pe-3"} data-theme="one">THEME</div>
+              <ToggleSwitch></ToggleSwitch>
+            </div>
+          </div>
       </div>
       <div className="row mt-3">
-      <Display displayValue={displayValue}></Display>
+        <Display displayValue={displayValue}></Display>
       </div>
       <div className="row mt-3">
-      <Keypad 
-          onGeneric={() => handleGeneric} 
-          onDelete={() => handleDelete}
-          onOperation={() => handleOperation}
-          onEquals={() => handleEquals}
-          onReset={() => handleReset}
-      ></Keypad>
+        <Keypad 
+            onGeneric={() => handleGeneric} 
+            onDelete={() => handleDelete}
+            onOperation={() => handleOperation}
+            onEquals={() => handleEquals}
+            onReset={() => handleReset}
+        ></Keypad>
       </div>
     </div>
   );
