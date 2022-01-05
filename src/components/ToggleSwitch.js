@@ -1,46 +1,36 @@
-import React, { useState } from 'react';
-
 import styles from './ToggleSwitch.module.css';
 
-function ToggleSwitch() {
-
-    // TODO: Maybe break each input into its own component?
-    // TODO: Make this more elegant...
-    const [theme, setTheme] = useState("one");
+function ToggleSwitch(props) {
 
     const THEME_ONE = "one";
     const THEME_TWO = "two"
     const THEME_THREE = "three";
 
-    function handleThemeClick(selection) {
-        setTheme(selection);
-    }
-
     return (
-        <div className={styles.toggle} data-theme="one">
-            <div className={styles['toggle-btn-container']} data-theme="one">
-                <label className={styles["toggle-label"]} htmlFor="theme-1" data-theme="one"><span>1</span></label>
+        <div className={styles.toggle} data-theme={props.theme}>
+            <div className={styles['toggle-btn-container']} data-theme={props.theme}>
+                <label className={styles["toggle-label"]} htmlFor="theme-1" data-theme={props.theme}><span>1</span></label>
                 <input 
-                    checked={theme === THEME_ONE ? true : false}
-                    onChange={() => handleThemeClick(THEME_ONE)}
+                    checked={props.theme === THEME_ONE ? true : false}
+                    onChange={props.onThemeSwitch()}
                     className={styles["toggle-btn"]} 
-                    type="radio" id="theme-1" name="theme"/>
+                    type="radio" id="theme-1" name="theme" value={THEME_ONE}/>
                 </div>
-                <div className={styles["toggle-btn-container"]} data-theme="one">
-                <label className={styles["toggle-label"]} htmlFor="theme-2" data-theme="one"><span>2</span></label>
+                <div className={styles["toggle-btn-container"]} data-theme={props.theme}>
+                <label className={styles["toggle-label"]} htmlFor="theme-2" data-theme={props.theme}><span>2</span></label>
                 <input 
-                    checked={theme === THEME_TWO ? true : false}
-                    onChange={() => handleThemeClick(THEME_TWO)}
+                    checked={props.theme === THEME_TWO ? true : false}
+                    onChange={props.onThemeSwitch()}
                     className={styles["toggle-btn"]} 
-                    type="radio" id="theme-2" name="theme"/>
+                    type="radio" id="theme-2" name="theme" value={THEME_TWO}/>
                 </div>
-                <div className={styles["toggle-btn-container"]} data-theme="one">
-                <label className={styles["toggle-label"]} htmlFor="theme-3" data-theme="one"><span>3</span></label>
+                <div className={styles["toggle-btn-container"]} data-theme={props.theme}>
+                <label className={styles["toggle-label"]} htmlFor="theme-3" data-theme={props.theme}><span>3</span></label>
                 <input 
-                    checked={theme === THEME_THREE ? true : false}
-                    onChange={() => handleThemeClick(THEME_THREE)}
+                    checked={props.theme === THEME_THREE ? true : false}
+                    onChange={props.onThemeSwitch()}
                     className={styles["toggle-btn"]} 
-                    type="radio" id="theme-3" name="theme"/>
+                    type="radio" id="theme-3" name="theme" value={THEME_THREE}/>
             </div>
         </div>
     );

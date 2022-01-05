@@ -13,6 +13,18 @@ function Calculator() {
   const [displayValue, setDisplayValue] = useState(0.00);
   const [history, setHistory] = useState([]);
   const [currentNumber, setCurrentNumber] = useState(null);
+  const [theme, setTheme] = useState("one");
+
+  // Theme
+  function handleThemeClick(event) {
+    let newTheme = event.target.value;
+    setTheme(newTheme);
+
+    // Style the body element
+    console.log(document.body.dataset.theme);
+    document.body.dataset.theme = newTheme;
+    console.log(document.body.dataset.theme);
+  }
 
   // Operations
   const SUBTRACT = "-";
@@ -131,19 +143,20 @@ function Calculator() {
   return (
     <div className="container p-5">
       <div className="row">
-        <div className={styles['main-font-color'] + " col-2 fs-1"} data-theme="one">Calculator</div>
+        <div className={styles['main-font-color'] + " col-2 fs-1"} data-theme={theme}>Calculator</div>
         <div className="col-10 d-flex justify-content-end">
           <div className="d-flex flex-row align-items-end">
-            <div className={styles['main-font-color'] + " pe-3"} data-theme="one">THEME</div>
-              <ToggleSwitch></ToggleSwitch>
+            <div className={styles['main-font-color'] + " pe-3"} data-theme={theme}>THEME</div>
+              <ToggleSwitch theme={theme} onThemeSwitch={() => handleThemeClick}></ToggleSwitch>
             </div>
           </div>
       </div>
       <div className="row mt-3">
-        <Display displayValue={displayValue}></Display>
+        <Display displayValue={displayValue} theme={theme}></Display>
       </div>
       <div className="row mt-3">
         <Keypad 
+            theme={theme}
             onGeneric={() => handleGeneric} 
             onDelete={() => handleDelete}
             onOperation={() => handleOperation}
