@@ -3,6 +3,10 @@ import Display from './Display';
 import Keypad from './Keypad';
 import ToggleSwitch from './ToggleSwitch';
 
+// TODO: Add Tests...
+// TODO: Make sure mobile responsiveness works...
+// TODO: Make the themes work...
+// TODO: Ability to type using numpad...
 function Calculator() {
 
   const [displayValue, setDisplayValue] = useState(0.00);
@@ -21,7 +25,7 @@ function Calculator() {
   function handleGeneric(event) {
     const key = event.target.innerText;
 
-    // Concatinate strings together for the number
+    // Concatenate strings together for the number
     let newNumber = null;
     if(currentNumber === null) {
       newNumber = key.toString();
@@ -37,9 +41,9 @@ function Calculator() {
       newHistory[newHistory.length - 1] = newNumber;
     }
 
+    setDisplayValue(newHistory.join(''));
     setHistory(newHistory);
     setCurrentNumber(newNumber);
-    setDisplayValue(newNumber);
   }
 
   // TODO: Clean this up...
@@ -69,14 +73,12 @@ function Calculator() {
     let newHistory = [...history];
     newHistory.push(key);
 
-    // TODO: Display current caluclation...
-    setDisplayValue(0.00);
+    setDisplayValue(newHistory.join(''));
     setHistory(newHistory);
     setCurrentNumber(null);
   }
 
-  // TODO: Finish this...
-  function handleEquals(event) {
+  function handleEquals() {
 
     // Perform all the operations
     let result = 0;
@@ -113,7 +115,6 @@ function Calculator() {
 
     // Display the result...
     setDisplayValue(result)
-    // TODO: Take care of the history?
   }
 
   function handleReset() {
@@ -133,12 +134,12 @@ function Calculator() {
           Calculator
       </div>
       <div className="col-10 d-flex justify-content-end">
-          <div className="d-flex flex-row align-items-end"> {/* Toggle Theme */}
-          <div className="pe-3 text-white">
-              THEME
-          </div>
-          <ToggleSwitch></ToggleSwitch>
-          </div>
+        <div className="d-flex flex-row align-items-end"> {/* Toggle Theme */}
+        <div className="pe-3 text-white">
+            THEME
+        </div>
+        <ToggleSwitch></ToggleSwitch>
+        </div>
       </div>
       </div>
       <div className="row mt-3">
